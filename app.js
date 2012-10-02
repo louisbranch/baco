@@ -12,9 +12,9 @@ var path = require('path');
 
 var app = express();
 
-function compile(str, path) {
+var compile = function(str, path) {
   return stylus(str).set('filename', path).use(nib());
-}
+};
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
