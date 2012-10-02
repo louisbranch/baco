@@ -36,6 +36,7 @@ module.exports = function(grunt) {
     jshint: {
       options: {
         curly: true,
+        camelcase: true,
         eqeqeq: true,
         immed: true,
         latedef: true,
@@ -43,9 +44,10 @@ module.exports = function(grunt) {
         noarg: true,
         sub: true,
         undef: true,
+        unused: true,
         boss: true,
         eqnull: true,
-        browser: true
+        node: true
       },
       globals: {}
     },
@@ -53,7 +55,6 @@ module.exports = function(grunt) {
   });
 
   // Default task.
-  //grunt.registerTask('default', 'lint qunit concat min');
-  grunt.registerTask('default', 'concat min');
+  grunt.registerTask('default', 'lint qunit concat min');
 
 };
