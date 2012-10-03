@@ -4,5 +4,12 @@ html
     title= title
     script(src= '/javascripts/baco.min.js')
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/menu.css')
   body
-    block content
+    .container
+      h1 Gozando a Vida
+      .row
+        .menu.span4
+          .separator Categorias
+        .content.span8
+          block content
