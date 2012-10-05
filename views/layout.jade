@@ -7,6 +7,7 @@ html
     link(rel='stylesheet', href='/stylesheets/layout.css')
     link(rel='stylesheet', href='/stylesheets/content.css')
     link(rel='stylesheet', href='/stylesheets/menu.css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,600,700')
   body
     .container
       h1 Gozando a Vida
@@ -14,10 +15,15 @@ html
         .menu.span3
           .separator Categorias
           ul.unstyled
-            li Category 1
-            li Category 2
-            li Category 3
-            li Category 4
-            li Category 5
+            li.active
+              a(href='#') Category 1
+            li
+              a(href='#') Category 2
+            li
+              a(href='#') Category 3
+            li
+              a(href='#') Category 4
+            li
+              a(href='#') Category 5
         .content.span9
           block content

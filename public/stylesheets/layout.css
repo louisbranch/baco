@@ -1,3 +1,9 @@
 body {
   background: #099bf2;
 }
+body h1 {
+  color: #fff;
+  text-align: center;
+  margin: 20px 0 40px;
+  text-shadow: 1px 1px #333;
+}

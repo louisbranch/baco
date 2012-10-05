@@ -4,14 +4,20 @@
   margin-top: 5px
   background-color #2B2B2F
   color #fff
+  text-shadow 1px 1px rgba(0,0,0,1)
   border-radius(top left 5px, bottom left 5px)
   box-shadow(3px 3px 8px rgba(0,0,0,0.4))
-  ul, div
-    padding 10px
   .separator
     margin 10px
+    padding 10px
     background-color #1F1F22
+    text-transform uppercase
     border-radius(5px)
-    text-shadow(1px 1px rgba(0,0,0,0.5))
   ul li
-    padding 5px
+    padding 10px 20px
+    &:hover, &.active
+      background-color #1278B0
+      cursor pointer
+    a
+      color #fff
+      text-decoration none
