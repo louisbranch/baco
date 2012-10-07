@@ -8,21 +8,8 @@ html
     .container
       h1 Gozando a Vida
       .wrapper.row
-        .menu.span3
-          .separator Categorias
-          ul.unstyled
-            li.active
-              a(href='#')
-                i.icon-camera-retro
-                Category 1
-            li
-              a(href='#') Category 2
-            li
-              a(href='#') Category 3
-            li
-              a(href='#') Category 4
-            li
-              a(href='#') Category 5
-        .content.span9
+        include includes/menu
+        .content-pane.span9
           .header
-          block content
+          .content
+            block content

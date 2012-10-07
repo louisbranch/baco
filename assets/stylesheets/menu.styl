@@ -1,8 +1,15 @@
-@import 'nib/vendor'
+@import 'nib'
+
+$background = #2B2B2F
+
+$active = #1278B0
+$active-light = lighten($active, 50%)
+$active-dark = darken($active, 50%)
 
 .menu
   margin-top: 5px
-  background-color #2B2B2F
+  background-color $background
+  font-size 17px
   color #fff
   text-shadow 1px 1px rgba(0,0,0,1)
   border-radius(top left 5px, bottom left 5px)
@@ -14,10 +21,16 @@
     text-transform uppercase
     border-radius(5px)
   ul li
+    border-top 1px solid $background
+    border-bottom 1px solid $background
     padding 10px 20px
     &:hover, &.active
-      background-color #1278B0
+      border-top 1px solid $active-light
+      border-bottom 1px solid $active-dark
+      background linear-gradient(top, lighten($active, 10%), $active)
       cursor pointer
     a
       color #fff
       text-decoration none
+      i
+        margin-right 5px
