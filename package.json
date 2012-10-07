@@ -11,6 +11,7 @@
     "grunt": "*",
     "grunt-css": "*",
     "grunt-stylus": "*",
+    "grunt-typescript": "*",
     "stylus": "*",
     "nib": "*"
   }
