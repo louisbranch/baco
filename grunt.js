@@ -24,12 +24,22 @@ module.exports = function(grunt) {
       dist: {
         src: 'vendors/javascripts/**/*.js',
         dest: 'public/javascripts/<%= pkg.name %>.js'
+      },
+      css: {
+        src: 'vendors/stylesheets/**/*.css',
+        dest: 'public/stylesheets/<%= pkg.name %>.css'
       }
     },
     min: {
       dist: {
         src: 'public/javascripts/<%= pkg.name %>.js',
         dest: 'public/javascripts/<%= pkg.name %>.min.js'
+      }
+    },
+    cssmin: {
+      css: {
+        src: 'public/stylesheets/<%= pkg.name %>.css',
+        dest: 'public/stylesheets/<%= pkg.name %>.min.css'
       }
     },
     watch: {
@@ -59,6 +69,6 @@ module.exports = function(grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', 'lint qunit concat min');
+  grunt.registerTask('default', 'lint qunit concat min cssmin');
 
 };
