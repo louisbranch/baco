@@ -1,5 +1,7 @@
 @import 'nib/vendor'
 
+$font-small = 12px
+
 .content-pane
   margin-left 0
   background #fff
@@ -14,5 +16,31 @@
     border-bottom 1px solid #ddd
     border-radius(top left 5px, top right 5px)
 
-  .content
+.content
+  padding 10px
+  ul.stories > li
+    position relative
     padding 10px
+    border-bottom 1px solid #ddd
+    .timeago
+      position absolute
+      top 20px
+      right 10px
+      font-size $font-small
+      color #999
+    h2
+      font-size 17px
+      line-height 18px
+    p.summary
+      margin-bottom 5px
+    .tags
+      div
+        float left
+        font-size $font-small
+        i
+          margin-right 5px
+      ul li
+        font-size $font-small
+        display inline-block
+        margin-right 10px
+
