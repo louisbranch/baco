@@ -1,18 +1,21 @@
 @import 'nib/vendor'
 
 $font-small = 12px
+$normal-color = #333
+
+$header-bg = #eee
 
 .content-pane
   margin-left 0
   background #fff
-  height 500px
+  min-height 600px
   border-radius(5px)
   box-shadow(3px 3px 8px rgba(0,0,0,0.4))
 
   .header
-    height 30px
     padding 5px
-    background #eee
+    overflow hidden
+    background $header-bg
     border-bottom 1px solid #ddd
     border-radius(top left 5px, top right 5px)
 
