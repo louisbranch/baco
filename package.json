@@ -10,6 +10,7 @@
     "jade": "*",
     "grunt": "*",
     "grunt-css": "*",
+    "grunt-stylus": "*",
     "stylus": "*",
     "nib": "*"
   }

@@ -3,6 +3,7 @@ module.exports = function(grunt) {
 
   // Load Dependencies
   grunt.loadNpmTasks('grunt-css');
+  grunt.loadNpmTasks('grunt-stylus');
 
   // Project configuration.
   grunt.initConfig({
@@ -20,13 +21,25 @@ module.exports = function(grunt) {
     qunit: {
       files: ['test/**/*.html']
     },
+    stylus: {
+      compile: {
+        options: {
+          'paths' : ['assets/stylesheets/*.styl']
+        },
+        files: {
+          'assets/stylesheets/layout.css' : 'assets/stylesheets/layout.styl',
+          'assets/stylesheets/content.css' : 'assets/stylesheets/content.styl',
+          'assets/stylesheets/menu.css' : 'assets/stylesheets/menu.styl'
+        }
+      }
+    },
     concat: {
       dist: {
         src: 'vendors/javascripts/**/*.js',
         dest: 'public/javascripts/<%= pkg.name %>.js'
       },
       css: {
-        src: 'vendors/stylesheets/**/*.css',
+        src: ['vendors/stylesheets/**/*.css', 'assets/stylesheets/**/*.css'],
         dest: 'public/stylesheets/<%= pkg.name %>.css'
       }
     },
@@ -69,6 +82,6 @@ module.exports = function(grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', 'lint qunit concat min cssmin');
+  grunt.registerTask('default', 'lint qunit stylus concat min cssmin');
 
 };
