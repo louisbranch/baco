@@ -1,6 +1,9 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
+  // Load Dependencies
+  grunt.loadNpmTasks('grunt-css');
+
   // Project configuration.
   grunt.initConfig({
     pkg: '<json:package.json>',
