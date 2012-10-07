@@ -3,18 +3,12 @@
  */
 
 var express = require('express');
-var stylus = require('stylus');
-var nib = require('nib');
 var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 
 var app = express();
-
-var compile = function(str, path) {
-  return stylus(str).set('filename', path).use(nib());
-};
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -25,7 +19,6 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
-  app.use(stylus.middleware({src: __dirname + '/assets', compile: compile}));
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
