@@ -15,12 +15,6 @@ module.exports = function(grunt) {
         '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
         ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */'
     },
-    lint: {
-      files: ['grunt.js', 'app.js', 'lib/**/*.js', 'test/**/*.js']
-    },
-    qunit: {
-      files: ['test/**/*.html']
-    },
     stylus: {
       compile: {
         options: {
@@ -56,8 +50,14 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: '<config:lint.files>',
-      tasks: 'lint qunit'
+      client: {
+        files: 'assets/javascripts/**/*.js',
+        tasks: 'concat:dist min'
+      },
+      styles: {
+        files: 'assets/stylesheets/**/*.styl',
+        tasks: 'stylus concat:css cssmin'
+      }
     },
     jshint: {
       options: {
@@ -82,6 +82,6 @@ module.exports = function(grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', 'lint qunit stylus concat min cssmin');
+  grunt.registerTask('default', 'stylus concat min cssmin');
 
 };
