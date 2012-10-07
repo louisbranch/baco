@@ -59,25 +59,6 @@ module.exports = function(grunt) {
         tasks: 'stylus concat:css cssmin'
       }
     },
-    jshint: {
-      options: {
-        curly: true,
-        camelcase: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        unused: true,
-        boss: true,
-        eqnull: true,
-        node: true,
-        es5: true
-      },
-      globals: {}
-    },
     uglify: {}
   });
 
