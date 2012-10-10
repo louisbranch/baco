@@ -2,18 +2,16 @@ extends layout
 
 block content
   ul.unstyled.stories
-    li
-      h2
-        a(href='#') One, Two, Three Little Indians
-      p.summary Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum ante ut mi malesuada ullamcorper pellentesque ...
-      .timeago 2 dias atras
-      .tags
-        div
-          i.icon-tags
-        ul.unstyled
-          li
-            a(href='#') indians
-          li
-            a(href='#') white men
-          li
-            a(href='#') settles
+    each story in stories
+      li
+        h2
+          a(href="contos/#{story.id}")= story.title
+        p.summary= story.content
+        .timeago 2 dias atras
+        .tags
+          div
+            i.icon-tags
+          ul.unstyled
+            each tag in story.tags
+              li
+                a(href="/categorias/#{tag}")= tag
