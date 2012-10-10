@@ -1,5 +1,9 @@
 var stories = require('../lib/stories');
 
 exports.index = function(req, res){
-  res.render('index', { stories: stories.summary() });
+  stories.summary(function(err, body) {
+    if (!err) {
+      res.render('index', { stories: body.rows });
+    }
+  });
 };

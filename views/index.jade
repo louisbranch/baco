@@ -5,13 +5,13 @@ block content
     each story in stories
       li
         h2
-          a(href="contos/#{story.id}")= story.title
-        p.summary= story.content
+          a(href="contos/#{story.id}")= story.value.title
+        p.summary= story.value.content
         .timeago 2 dias atras
         .tags
           div
             i.icon-tags
           ul.unstyled
-            each tag in story.tags
+            each tag in story.value.tags
               li
                 a(href="/categorias/#{tag}")= tag
