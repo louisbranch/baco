@@ -13,6 +13,7 @@
     "grunt-stylus": "*",
     "grunt-typescript": "*",
     "stylus": "*",
-    "nib": "*"
+    "nib": "*",
+    "nano": "*"
   }
 }
