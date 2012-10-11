@@ -12,41 +12,42 @@ $header-bg = #eee
   border-radius(5px)
   box-shadow(3px 3px 8px rgba(0,0,0,0.4))
 
-  .header
-    padding 5px
-    overflow hidden
-    background $header-bg
-    border-bottom 1px solid #ddd
-    border-radius(top left 5px, top right 5px)
-    form
-      float right
-      margin 5px 10px
+.header
+  padding 5px
+  overflow hidden
+  background $header-bg
+  border-bottom 1px solid #ddd
+  border-radius(top left 5px, top right 5px)
+  form
+    float right
+    margin 5px 10px
 
 .content
   padding 10px
-  ul.stories > li
-    position relative
-    padding 10px
-    border-bottom 1px solid #ddd
-    .timeago
-      position absolute
-      top 20px
-      right 10px
-      font-size $font-small
-      color #999
-    h2
-      font-size 17px
-      line-height 18px
-    p.summary
-      margin-bottom 5px
-    .tags
-      div
-        float left
-        font-size $font-small
-        i
-          margin-right 5px
-      ul li
-        font-size $font-small
-        display inline-block
-        margin-right 10px
 
+ul.stories > li
+  position relative
+  padding 10px
+  border-bottom 1px solid #ddd
+  .timeago
+    position absolute
+    top 20px
+    right 10px
+    font-size $font-small
+    color #999
+  h2
+    font-size 17px
+    line-height 18px
+  p
+    margin-bottom 5px
+
+.tags
+  div
+    float left
+    font-size $font-small
+    i
+      margin-right 5px
+  ul li
+    font-size $font-small
+    display inline-block
+    margin-right 10px

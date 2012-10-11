@@ -14,24 +14,26 @@ $active-dark = darken($active, 50%)
   text-shadow 1px 1px rgba(0,0,0,1)
   border-radius(top left 5px, bottom left 5px)
   box-shadow(3px 3px 8px rgba(0,0,0,0.4))
-  .separator
-    margin 10px
-    padding 10px
-    background-color #1F1F22
-    text-transform uppercase
-    border-radius(5px)
-    box-shadow(inset 2px 2px rgba(0,0,0,0.1))
-  ul li
-    border-top 1px solid $background
-    border-bottom 1px solid $background
-    padding 10px 20px
-    &:hover, &.active
-      border-top 1px solid $active-light
-      border-bottom 1px solid $active-dark
-      background linear-gradient(top, lighten($active, 10%), $active)
-      cursor pointer
-    a
-      color #fff
-      text-decoration none
-      i
-        margin-right 5px
+
+.separator
+  margin 10px
+  padding 10px
+  background-color #1F1F22
+  text-transform uppercase
+  border-radius(5px)
+  box-shadow(inset 2px 2px rgba(0,0,0,0.1))
+
+ul.menu-list li
+  border-top 1px solid $background
+  border-bottom 1px solid $background
+  padding 10px 20px
+  &:hover, &.is-active
+    border-top 1px solid $active-light
+    border-bottom 1px solid $active-dark
+    background linear-gradient(top, lighten($active, 10%), $active)
+    cursor pointer
+  a
+    color #fff
+    text-decoration none
+    i
+      margin-right 5px
