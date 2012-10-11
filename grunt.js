@@ -21,31 +21,31 @@ module.exports = function(grunt) {
           'paths' : ['assets/stylesheets/*.styl']
         },
         files: {
-          'assets/stylesheets/layout.css' : 'assets/stylesheets/layout.styl',
-          'assets/stylesheets/content.css' : 'assets/stylesheets/content.styl',
-          'assets/stylesheets/menu.css' : 'assets/stylesheets/menu.styl'
+          'tmp/stylesheets/layout.css' : 'assets/stylesheets/layout.styl',
+          'tmp/stylesheets/content.css' : 'assets/stylesheets/content.styl',
+          'tmp/stylesheets/menu.css' : 'assets/stylesheets/menu.styl'
         }
       }
     },
     concat: {
       dist: {
         src: 'vendors/javascripts/**/*.js',
-        dest: 'public/javascripts/<%= pkg.name %>.js'
+        dest: 'tmp/javascripts/<%= pkg.name %>.js'
       },
       css: {
-        src: ['vendors/stylesheets/**/*.css', 'assets/stylesheets/**/*.css'],
-        dest: 'public/stylesheets/<%= pkg.name %>.css'
+        src: ['vendors/stylesheets/**/*.css', 'tmp/stylesheets/**/*.css'],
+        dest: 'tmp/stylesheets/<%= pkg.name %>.css'
       }
     },
     min: {
       dist: {
-        src: 'public/javascripts/<%= pkg.name %>.js',
+        src: 'tmp/javascripts/<%= pkg.name %>.js',
         dest: 'public/javascripts/<%= pkg.name %>.min.js'
       }
     },
     cssmin: {
       css: {
-        src: 'public/stylesheets/<%= pkg.name %>.css',
+        src: 'tmp/stylesheets/<%= pkg.name %>.css',
         dest: 'public/stylesheets/<%= pkg.name %>.min.css'
       }
     },
