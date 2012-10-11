@@ -34,7 +34,7 @@ module.exports = function(grunt) {
       },
       css: {
         src: ['vendors/stylesheets/**/*.css', 'tmp/stylesheets/**/*.css'],
-        dest: 'tmp/stylesheets/<%= pkg.name %>.css'
+        dest: 'tmp/<%= pkg.name %>.css'
       }
     },
     min: {
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
     },
     cssmin: {
       css: {
-        src: 'tmp/stylesheets/<%= pkg.name %>.css',
+        src: 'tmp/<%= pkg.name %>.css',
         dest: 'public/stylesheets/<%= pkg.name %>.min.css'
       }
     },
