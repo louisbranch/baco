@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     },
     concat: {
       dist: {
-        src: 'vendors/javascripts/**/*.js',
+        src: ['vendors/javascripts/**/*.js','assets/javascripts/**/*.js'],
         dest: 'tmp/javascripts/<%= pkg.name %>.js'
       },
       css: {
