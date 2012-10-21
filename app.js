@@ -5,7 +5,6 @@ var path = require('path');
 var hbs = require('hbs');
 var fs = require('fs');
 
-
 var app = express();
 
 app.configure(function(){
@@ -22,6 +21,12 @@ app.configure(function(){
 
 app.configure('development', function(){
   app.use(express.errorHandler());
+  hbsPrecompiler = require('handlebars-precompiler');
+  hbsPrecompiler.watchDir(
+    __dirname + "/views",
+    __dirname + "/assets/javascripts/templates.js",
+    ['handlebars', 'hbs']
+  );
 });
 
 function loadPartial(name) {
