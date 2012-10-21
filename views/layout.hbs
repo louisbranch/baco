@@ -1,0 +1,22 @@
+<!doctype html>
+<head>
+  <script src='/javascripts/baco.min.js'></script>
+  <link rel='stylesheet' href='/stylesheets/baco.min.css'>
+</head>
+<body>
+  <div class='container'>
+    <h1>Living Large</h1>
+    <div class='wrapper row'>
+      {{>menu}}
+      <div class='content-pane span9'>
+        <div class='header'>
+          {{>header}}
+        </div>
+        <div class='content'>
+          {{{body}}}
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
