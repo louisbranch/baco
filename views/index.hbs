@@ -1,7 +1,18 @@
-<h2>Me</h2>
-<ul class='stories'>
-  {{#list stories}}
+<ul class='stories unstyled'>
+  {{#each stories}}
     <li>
+      <h2>
+        <a href='contos/{{id}}'>{{value.title}}</a>
+      </h2>
+      <p>{{value.content}}}}</p>
+      <div class='timeago'></div>
+      <div class='tags'>
+        <div><i class='icon-tags'></i></div>
+        <ul class='unstyled'>
+          {{#each value.tags}}
+            <li><a href='categorias/{{this}}'>{{this}}</a>
+          {{/each}}
+        </ul>
     </li>
-  {{/list}}
+  {{/each}}
 </ul>
