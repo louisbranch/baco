@@ -2,12 +2,7 @@
   <div class='menu-separator'>Contos</div>
   <ul class='menu-list menu-favorites'>
     {{#each favorites}}
-      <li>
-        <a href='#'>
-          <i class='icon-{{icon}}'></i>
-          {{name}}
-        </a>
-      </li>
+      {{> menu_item }}
     {{/each}}
   </ul>
   <div class='menu-separator'>Categorias</div>

@@ -30,7 +30,7 @@ app.configure('development', function(){
 });
 
 function loadPartial(name) {
-  var file = fs.readFileSync(__dirname + '/views/_'+name+'.hbs', 'utf8');
+  var file = fs.readFileSync(__dirname + '/views/'+name+'.hbs', 'utf8');
   hbs.registerPartial(name, file);
 }
 
